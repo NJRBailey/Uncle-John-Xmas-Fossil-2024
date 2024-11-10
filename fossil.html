@@ -11,15 +11,14 @@
     <div class="container">
       <div class="model-viewer-container">
         <model-viewer
-          src="./fossil-fixed.glb"
+          src="./fossil-full.glb"
           alt="The St. Hilda Snakestone fossil carving"
           camera-controls
           disable-zoom
           disable-pan
-          min-camera-orbit="-75deg auto auto"
-          max-camera-orbit="75deg auto auto"
           interaction-prompt="none"
-          camera-orbit="0deg 90deg 0deg">
+          camera-orbit="-90deg 90deg 0deg"
+          auto-rotate>
         </model-viewer>
       </div>
       <div class="info">
@@ -46,18 +45,51 @@
     </div>
     <div class="overlay" id="certificate-overlay">
       <div class="overlay-content">
+        <div class="model-viewer-container">
+          <model-viewer
+            src="./certificate.glb"
+            alt="The certificate of authenticity for the St. Hilda Snakestone fossil carving"
+            disable-pan
+            disable-zoom
+            camera-orbit="0deg 90deg 0deg"
+            camera-controls
+            auto-rotate>
+          </model-viewer>
+        </div>
         <p>Certificate</p>
         <button id="close-certificate-overlay" type="button">Close</button>
       </div>
     </div>
     <div class="overlay" id="ammonite-overlay">
       <div class="overlay-content">
+        <div class="model-viewer-container">
+          <model-viewer
+            src="./ammonite.glb"
+            alt="The certificate of authenticity for the St. Hilda Snakestone fossil carving"
+            disable-pan
+            disable-zoom
+            camera-orbit="0deg 90deg 0deg"
+            camera-controls
+            auto-rotate>
+          </model-viewer>
+        </div>
         <p>Ammonite</p>
         <button id="close-ammonite-overlay" type="button">Close</button>
       </div>
     </div>
     <div class="overlay" id="snake-overlay">
       <div class="overlay-content">
+        <div class="model-viewer-container">
+          <model-viewer
+            src="./hilda-framed.glb"
+            alt="The certificate of authenticity for the St. Hilda Snakestone fossil carving"
+            disable-pan
+            disable-zoom
+            camera-orbit="225deg 90deg 0deg"
+            camera-controls
+            auto-rotate>
+          </model-viewer>
+        </div>
         <p>Snake</p>
         <button id="close-snake-overlay" type="button">Close</button>
       </div>
@@ -69,6 +101,8 @@
         <a href="https://www.flaticon.com/free-icons/ammonite" title="ammonite icons">Ammonite icons created by Freepik - Flaticon</a><br>
         <a href="https://www.flaticon.com/free-icons/serpent" title="serpent icons">Serpent icons created by Icons_Field - Flaticon</a><br>
         <a href="https://www.flaticon.com/free-icons/info" title="info icons">Info icons created by Freepik - Flaticon</a><br>
+        "Ammonite" (https://skfb.ly/oD6Mw) by Emil van Dam is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).<br>
+        "Ornate Picture Frame" (https://skfb.ly/6xT7E) by WENGA is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).<br>
         <button id="close-info-overlay" type="button">Close</button>
       </div>
     </div>
