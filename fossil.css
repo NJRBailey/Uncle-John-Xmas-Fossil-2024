@@ -18,12 +18,20 @@ body {
     height: 80%;
 }
 
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+}
+
 .model-viewer-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    min-height: 160px;
+    margin-right: 10px;
 }
 
 model-viewer {
@@ -33,13 +41,6 @@ model-viewer {
 
 .text-box {
     flex: 1;
-    background: rgba(255, 255, 255, 0.1); /* Translucent background */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    -webkit-backdrop-filter: blur(10px); /* Glass-like effect */
-    backdrop-filter: blur(10px); /* Glass-like effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button-container {
@@ -95,6 +96,13 @@ model-viewer {
   max-width: 500px;
   text-align: center;
   z-index: 1001; /* Ensure overlay content is above the blurred background */
+  background: rgba(255, 255, 255, 0.1); /* Translucent background */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px); /* Glass-like effect */
+  backdrop-filter: blur(10px); /* Glass-like effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Blur effect for main content */
@@ -106,4 +114,24 @@ model-viewer {
 .overlay.show {
   bottom: 0;
   opacity: 1;
+}
+
+.info-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  /* background-color: white; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.info-button img {
+  width: 30px;
+  height: 30px;
 }
