@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -13,7 +17,26 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* width: 100vw; */
+}
+
+.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+  .reverse {
+    flex-direction: column;
+  }
+}
+
+.section#ammonite {
+  background-image: url("./marek-okon-tWWCqIMiUmg-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .model-container {
