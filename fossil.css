@@ -1,23 +1,22 @@
 body {
   display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
   background: rgb(14,14,14);
-  background: linear-gradient(0deg, rgba(14,14,14,1) 0%, rgba(20,20,20,1) 35%, rgba(50,50,50,1) 100%);
-  color: #F5F5DC
+  color: #ffffff;
 }
 
-#page {
+.section {
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  /* width: 100vw; */
 }
 
-#fossil-model-container {
+.model-container {
   display: flex;
   flex: 1;
   height: 50%;
@@ -27,12 +26,12 @@ body {
   background: radial-gradient(circle, rgba(65,65,65,1) 0%, rgba(14,14,14,0) 50%,rgba(14,14,14,0) 100%);
 }
 
-#fossil-model {
+.model {
   height: 100%;
   width: 100%;
 }
 
-#info {
+.info {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -60,79 +59,4 @@ body {
 .info-button img {
   max-height: 100%;
   max-width: 100%;
-}
-
-.overlay {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  opacity: 0;
-  transition: all 0.5s ease;
-  z-index: 1000;
-  -webkit-backdrop-filter: blur(5px); /* Apply blur to the background */
-  backdrop-filter: blur(5px); /* Apply blur to the background */
-}
-
-.overlay-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 10px 10px 0 0;
-  width: 80%;
-  max-width: 500px;
-  min-height: 80vh;
-  height: 80%;
-  text-align: center;
-  z-index: 1001; /* Ensure overlay content is above the blurred background */
-  background: rgba(255, 255, 255, 0.1); /* Translucent background */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  flex: 1; /* Allow overlay-content to grow */
-}
-
-.overlay.show {
-  bottom: 0;
-  opacity: 1;
-}
-
-.info-model-container {
-  display: flex;
-  flex: 1;
-  height: 50%;
-  width: 50%;
-  min-height: 160px;
-}
-
-.info-model {
-  height: 100%;
-  width: 100%;
-}
-
-#credits-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  /* background-color: white; */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  cursor: pointer;
-}
-
-#credits-button img {
-  width: 30px;
-  height: 30px;
 }
