@@ -12,6 +12,11 @@ body {
   color: #fbf5f3;
 }
 
+a {
+  color: #fbf5f3;
+  text-decoration: none;
+}
+
 .section {
   display: flex;
   flex-direction: row;
@@ -20,10 +25,26 @@ body {
   min-height: 100vh;
 }
 
+.navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding-top: 0.2em;
+  height: 0.8em;
+  margin-right: 6px;
+}
+
 .reverse {
   display: flex;
   flex-direction: row-reverse;
   background: #fbf5f3;
+  color: #0e0e0e;
+}
+
+.reverse a {
   color: #0e0e0e;
 }
 
@@ -89,26 +110,22 @@ body {
   border-bottom: #f5c800 solid 4px;
 }
 
-#info-buttons {
+#fossil-info-box {
   display: flex;
-  flex-direction: row;
-}
-
-.info-button {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  margin-left: 10px;
-  margin-right: 10px;
-  cursor: pointer;
+  align-items: start;
 }
 
-.info-button img {
-  max-height: 100%;
-  max-width: 100%;
+#fossil-info {
+  width: 100%;
+  align-self: start;
+  padding-bottom: 10px;
+  border-bottom:#fbf5f3 solid 4px;
+}
+
+#certificate-down {
+  padding-top: 20px;
 }
 
 footer {
@@ -125,6 +142,5 @@ footer {
 }
 
 #credits a {
-  color: #fbf5f3;
   text-decoration: underline;
 }
